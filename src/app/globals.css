@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #0B0B10;
+  --color-panel: #15151C;
+  --color-border: #26262F;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A1A1AA;
+  --color-accent-start: #7C5CFF;
+  --color-accent-end: #3B82F6;
+  --color-status-complete: #22C55E;
+  --color-status-waiting: #F59E0B;
+  --color-status-failed: #EF4444;
+  --color-status-generating: #3B82F6;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-jetbrains-mono), monospace;
+}
+
+.studio-gradient {
+  background: linear-gradient(135deg, var(--color-accent-start) 0%, var(--color-accent-end) 100%);
+}
+
+.studio-gradient-text {
+  background: linear-gradient(135deg, #A78BFA 0%, #60A5FA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #26262F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B3B48;
+}
+
